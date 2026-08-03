@@ -19,7 +19,8 @@ console.log(sumResult1 ,sumResult2);
 // sumResult1 = undefine 
 // sumResult2 = undefine 
 
-// Execution phase 
+// Execution phase   
+
 
 // let const  
 // Memory allocstion 
