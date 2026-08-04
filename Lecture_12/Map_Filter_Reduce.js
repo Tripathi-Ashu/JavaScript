@@ -93,3 +93,54 @@ const products = [
 const newproduct = products.filter((prompt) => prompt.price > 50).sort((a ,b) => b.price -a.price);
 console.log(newproduct);
 
+
+const ans = products.map((product , index , arr) => ({name:product.name , price:product.price}));
+console.log(ans);
+
+// reduce 
+
+const totalPrice = products.reduce((accumulator , currenVal) => {
+    if(currenVal.inStock)
+    return accumulator + currenVal.price;
+    else 
+    return accumulator;
+}, 0)
+
+console.log(totalPrice);
+
+//Data structure : set 
+
+const arr4 = [10 , 20 , 30 , 30 , 40 , 50, 30 ,40 ]
+const s1 = new Set(arr4);
+s1.add(11);
+console.log(s1.has(23));
+s1.delete(10);
+s1.clear();
+
+const email = ['r@gm', 'ra@gm', 're@gm' , 'ra@gm'];
+const unique = [...new Set(email)];
+
+console.log(unique);
+
+const s1 = new Set(email);
+
+for(let num of s1) {
+    console.log(num);
+};
+
+
+// map Data Structure 
+
+const m1 = new  map( [
+    ['Rohit' , 40],
+    [2, 'Rohit'],
+    [true , 11],
+    [[10 , 20 , 30 , 11] , 'Mohit']
+]);
+
+console.log(m1);
+m1.set(name:"Manish" , age:20} , false);
+
+for(let [key, value] of m1) {
+    console.log(key , value);
+};
